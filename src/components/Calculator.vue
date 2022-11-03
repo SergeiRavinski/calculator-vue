@@ -1,7 +1,8 @@
 <template>
 	<section class="calculator">
 		<div class="calculator__output">
-			{{ showingResult ? currentResult : currentInput }} </div>
+			{{ showingResult ? currentResult : currentInput }} 
+		</div>
 		<button @click="clearResult" class="button__1">C</button>
 		<button @click="handleOperatorInput('/')" class="button__2">/</button>
 		<button @click="handleDigitInput(7)" class="button__3">7</button>
@@ -36,7 +37,7 @@ export default {
 		computed: {
 			currentInputAsNumber() {
 				return Number(this.currentInput)
-			},
+			}
 		},
 
 		methods: {
@@ -224,9 +225,4 @@ export default {
 		background: #F7B432;
 		color: white;
 	}
-
-
-
-
-
 </style>
