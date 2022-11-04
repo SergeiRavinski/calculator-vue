@@ -28,7 +28,7 @@ export default {
 		data() {
 			return {
 				currentResult: 0,
-				currentInput: '',
+				currentInput: 0,
 				currentOperator: null,
 				showingResult: false,
 			}
@@ -64,7 +64,7 @@ export default {
 				this.currentResult = 0;
 				this.currentInput = '';
 				this.currentOperator = null;
-				this.showingResult = false;
+				this.showingResult = true;
 			},
 			
 			handleOperatorInput(operator) {
