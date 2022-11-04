@@ -28,10 +28,14 @@ export default {
 		data() {
 			return {
 				currentResult: 0,
-				currentInput: 0,
+				currentInput: '',
 				currentOperator: null,
-				showingResult: false,
+				showingResult: true,
 			}
+		},
+
+		created() {
+			window.addEventListener('keyup', this.handleKeyUp);
 		},
 		
 		computed: {
@@ -57,6 +61,7 @@ export default {
 						break;
 					default:
 						this.currentResult = this.currentInputAsNumber;
+						break;
 				}
 			},
 
@@ -82,7 +87,39 @@ export default {
 			handleEqualsInput() {
 				this.calculateResult();
 				this.showingResult = true;
+				this.currentInput = '';
 			}
+
+			//handleKeyUp(event) {
+			//	switch(event.key) {
+			//		case '0':
+			//		case '1':
+			//		case '2':
+			//		case '3':
+			//		case '4':
+			//		case '5':
+			//		case '6':
+			//		case '7':
+			//		case '8':
+			//		case '9':
+			//		case '+':
+			//		case '-':
+			//		case '/':
+			//		case '*':
+			//		case '.':
+			//		case ',':
+			//			this.handleInput(event.key)
+			//			break;
+			//		case '=':
+			//		case 'Enter':
+			//			this.showResult()
+			//			break;
+			//		case 'Escape':
+			//		case 'Backspace':
+			//			this.clearResult()
+			//			break;
+			//	}
+			//}	
 		}
 	}	
 
