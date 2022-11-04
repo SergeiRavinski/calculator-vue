@@ -102,21 +102,25 @@ export default {
 			//		case '7':
 			//		case '8':
 			//		case '9':
+			//			this.handleDigitInput(event.key);
+			//			break;
 			//		case '+':
 			//		case '-':
 			//		case '/':
 			//		case '*':
+			//			this.handleOperatorInput(event.key);
+			//			break;
 			//		case '.':
 			//		case ',':
-			//			this.handleInput(event.key)
+			//			this.handleDigitInput('.');
 			//			break;
 			//		case '=':
 			//		case 'Enter':
-			//			this.showResult()
+			//			this.handleEqualsInput();
 			//			break;
 			//		case 'Escape':
 			//		case 'Backspace':
-			//			this.clearResult()
+			//			this.clearResult();
 			//			break;
 			//	}
 			//}	
