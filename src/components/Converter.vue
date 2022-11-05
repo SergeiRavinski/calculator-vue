@@ -32,6 +32,16 @@
 			valueKM() {
 				return (((this.valueMM / 10) / 100) / 1000);
 			}
+
+			//valueMM() {
+			//	return (this.valueCM / 10);
+			//},
+			//valueM() {
+			//	return ((this.valueCM / 10) / 10);
+			//},
+			//valueKM() {
+			//	return (((this.valueCM / 10) / 100) / 100);
+			//}
 		},	
 	}
 </script>
