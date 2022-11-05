@@ -34,9 +34,9 @@ export default {
 			}
 		},
 
-		//created() {
-		//	window.addEventListener('keyup', this.handleKeyUp);
-		//},
+		created() {
+			window.addEventListener('keyup', this.handleKeyUp);
+		},
 		
 		computed: {
 			currentInputAsNumber() {
@@ -88,42 +88,42 @@ export default {
 				this.calculateResult();
 				this.showingResult = true;
 				this.currentInput = '';
-			}
+			},
 
-			//handleKeyUp(event) {
-			//	switch(event.key) {
-			//		case '0':
-			//		case '1':
-			//		case '2':
-			//		case '3':
-			//		case '4':
-			//		case '5':
-			//		case '6':
-			//		case '7':
-			//		case '8':
-			//		case '9':
-			//			this.handleDigitInput(event.key);
-			//			break;
-			//		case '+':
-			//		case '-':
-			//		case '/':
-			//		case '*':
-			//			this.handleOperatorInput(event.key);
-			//			break;
-			//		case '.':
-			//		case ',':
-			//			this.handleDigitInput('.');
-			//			break;
-			//		case '=':
-			//		case 'Enter':
-			//			this.handleEqualsInput();
-			//			break;
-			//		case 'Escape':
-			//		case 'Backspace':
-			//			this.clearResult();
-			//			break;
-			//	}
-			//}	
+			handleKeyUp(event) {
+				switch(event.key) {
+					case '0':
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+					case '5':
+					case '6':
+					case '7':
+					case '8':
+					case '9':
+						this.handleDigitInput(event.key);
+						break;
+					case '+':
+					case '-':
+					case '/':
+					case '*':
+						this.handleOperatorInput(event.key);
+						break;
+					case '.':
+					case ',':
+						this.handleDigitInput('.');
+						break;
+					case '=':
+					case 'Enter':
+						this.handleEqualsInput();
+						break;
+					case 'Escape':
+					case 'Backspace':
+						this.clearResult();
+						break;
+				}
+			}	
 		}
 	}
 
