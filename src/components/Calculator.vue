@@ -34,9 +34,9 @@ export default {
 			}
 		},
 
-		created() {
-			window.addEventListener('keyup', this.handleKeyUp);
-		},
+		//created() {
+		//	window.addEventListener('keyup', this.handleKeyUp);
+		//},
 		
 		computed: {
 			currentInputAsNumber() {

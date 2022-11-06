@@ -1,9 +1,21 @@
 <template>
 	<section class="converter">
-		<input class="converter__input" type="number" placeholder="mm" v-model="valueMM"/>
-		<input class="converter__input" type="number" placeholder="cm" v-model="valueCM"/>
-		<input class="converter__input" type="number" placeholder="m" v-model="valueM"/>
-		<input class="converter__input" type="number" placeholder="km" v-model="valueKM"/>
+		<div class="converter__mm">
+			<input @input="handleInputMM" class="converter__input" type="number" placeholder="mm" v-model="valueMM">
+			<span>cm</span>
+		</div>
+		<div class="converter__cm">
+			<input @input="handleInputCM" class="converter__input" type="number" placeholder="cm" v-model="valueCM"/>
+			<span>m</span>
+		</div>
+		<div class="converter__m">
+			<input @input="handleInputM" class="converter__input" type="number" placeholder="m" v-model="valueM"/>
+			<span>m</span>
+		</div>
+		<div class="converter__km">
+			<input @input="handleInputKM" class="converter__input" type="number" placeholder="km" v-model="valueKM"/>
+			<span>km</span>
+		</div>
 		<!--<div class="converter__output">{{ valueCM }} cm</div>
 		<div class="converter__output">{{ valueM }} m</div>
 		<div class="converter__output">{{ valueKM }} km</div>-->
@@ -31,18 +43,27 @@
 			},
 			valueKM() {
 				return (((this.valueMM / 10) / 100) / 1000);
-			}
+			},
 
-			//valueMM() {
-			//	return (this.valueCM / 10);
-			//},
-			//valueM() {
-			//	return ((this.valueCM / 10) / 10);
-			//},
-			//valueKM() {
-			//	return (((this.valueCM / 10) / 100) / 100);
-			//}
-		},	
+		methods: {
+			handleInputMM() {
+
+			},
+
+			handleInputCM() {
+					
+			},
+
+			handleInputM() {
+					
+			},
+			
+			handleInputKM() {
+					
+			},
+				
+			},
+		}	
 	}
 </script>
 
@@ -60,16 +81,9 @@
 		width: 435px;
 	}
 
-	.converter__output {
-		display: inline;
-		margin: 0 2rem 0.7rem 2rem;
-		padding: 0.3rem;
-		overflow: scroll;
-		border-radius: 0.3rem;
-	}
-
 	.converter__input {
 		height: 0.5rem;
+		width: 40%;
 		padding: 0.8rem;
 		border-radius: 0.3rem;
 		overflow: scroll;
