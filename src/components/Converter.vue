@@ -2,11 +2,11 @@
 	<section class="converter">
 		<div class="converter__mm">
 			<input @input="handleInputMM" class="converter__input" type="number" placeholder="mm" v-model="valueMM">
-			<span>cm</span>
+			<span>mm</span>
 		</div>
 		<div class="converter__cm">
 			<input @input="handleInputCM" class="converter__input" type="number" placeholder="cm" v-model="valueCM"/>
-			<span>m</span>
+			<span>cm</span>
 		</div>
 		<div class="converter__m">
 			<input @input="handleInputM" class="converter__input" type="number" placeholder="m" v-model="valueM"/>
