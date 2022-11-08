@@ -31,9 +31,6 @@
 			}
 		},
 
-		//computed: {
-		//},
-
 		methods: {
 			handleInputMM(mm) {
 				this.valueCM = this.valueMM / 10;  
@@ -77,10 +74,10 @@
 		width: 435px;
 	}
 
-	input:hover {
+	input:focus {
 		text-shadow: 0.125rem 0.125rem 0.25rem rgb(175, 175, 175);
-		transform: scale(1.02);
-		transition-duration: 250ms;
+		transform: scale(1.015);
+		transition-duration: 200ms;
 		transition-timing-function: ease-in-out;
 	}
 

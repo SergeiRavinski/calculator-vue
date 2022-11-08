@@ -152,7 +152,8 @@ export default {
 	}
 
 	button:hover {
-		background-color: rgb(206, 208, 221);
+		background-color: rgb(219, 221, 232);
+		transform: scale(1.02);
 		transition-duration: 100ms;
 		transition-timing-function: ease-in-out;
 	}
