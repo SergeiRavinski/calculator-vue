@@ -13,12 +13,9 @@
 			<span>m</span>
 		</div>
 		<div class="converter__km">
-			<input @input="handleInputKM" class="converter__input" type="number" placeholder="km" v-model="valueKM"/>
+			<input  @input="handleInputKM" class="converter__input" type="number" placeholder="km" v-model="valueKM"/>
 			<span>km</span>
 		</div>
-		<!--<div class="converter__output">{{ valueCM }} cm</div>
-		<div class="converter__output">{{ valueM }} m</div>
-		<div class="converter__output">{{ valueKM }} km</div>-->
 	</section>
 	
 </template>
@@ -35,36 +32,47 @@
 		},
 
 		computed: {
-			valueCM() {
-				return (this.valueMM / 10);
-			},
-			valueM() {
-				return ((this.valueMM / 10) / 100);
-			},
-			valueKM() {
-				return (((this.valueMM / 10) / 100) / 1000);
-			},
+			//valueMM() {
+
+			//	return (this.valueMM++);
+			//},
+			//valueCM() {
+			//	return (this.valueMM / 10);
+			//},
+			//valueM() {
+			//	return ((this.valueMM / 10) / 100);
+			//},
+			//valueKM() {
+			//	return (((this.valueMM / 10) / 100) / 1000);
+		},
 
 		methods: {
-			handleInputMM() {
-
+			handleInputMM(mm) {
+				this.valueCM = this.valueMM / 10;  
+				this.valueM = this.valueMM / 1000; 
+				this.valueKM = this.valueMM / 1000000;
 			},
 
 			handleInputCM() {
-					
+				this.valueMM = this.valueCM * 10;
+				this.valueM = this.valueCM / 100;
+				this.valueKM = this.valueCM / 100000;
 			},
 
 			handleInputM() {
-					
+				this.valueMM = this.valueM * 1000;
+				this.valueCM = this.valueM * 100;
+				this.valueKM = this.valueM / 1000;	
 			},
 			
 			handleInputKM() {
-					
-			},
-				
-			},
-		}	
-	}
+				this.valueMM = this.valueKM * 1000000;
+				this.valueCM = this.valueKM * 100000;
+				this.valueM = this.valueKM * 1000;
+			},			
+		},
+	}	
+	
 </script>
 
 <style>
