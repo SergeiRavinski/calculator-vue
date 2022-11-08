@@ -111,7 +111,6 @@ export default {
 						this.handleOperatorInput(event.key);
 						break;
 					case '.':
-					case ',':
 						this.handleDigitInput('.');
 						break;
 					case '=':

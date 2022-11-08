@@ -32,7 +32,7 @@
 		},
 
 		methods: {
-			handleInputMM(mm) {
+			handleInputMM() {
 				this.valueCM = this.valueMM / 10;  
 				this.valueM = this.valueMM / 1000; 
 				this.valueKM = this.valueMM / 1000000;
