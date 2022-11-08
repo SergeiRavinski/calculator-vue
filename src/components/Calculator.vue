@@ -34,9 +34,9 @@ export default {
 			}
 		},
 
-		//created() {
-		//	window.addEventListener('keyup', this.handleKeyUp);
-		//},
+		created() {
+			window.addEventListener('keyup', this.handleKeyUp);
+		},
 		
 		computed: {
 			currentInputAsNumber() {
@@ -153,7 +153,8 @@ export default {
 
 	button:hover {
 		background-color: rgb(206, 208, 221);
-		opacity: 0.8;
+		transition-duration: 100ms;
+		transition-timing-function: ease-in-out;
 	}
 
 	button:active {

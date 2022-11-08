@@ -31,20 +31,8 @@
 			}
 		},
 
-		computed: {
-			//valueMM() {
-
-			//	return (this.valueMM++);
-			//},
-			//valueCM() {
-			//	return (this.valueMM / 10);
-			//},
-			//valueM() {
-			//	return ((this.valueMM / 10) / 100);
-			//},
-			//valueKM() {
-			//	return (((this.valueMM / 10) / 100) / 1000);
-		},
+		//computed: {
+		//},
 
 		methods: {
 			handleInputMM(mm) {
@@ -80,7 +68,7 @@
 		background: #F7B432;
 		display: flex;
 		flex-direction: column;
-		color: black;
+		color: #3b526f;
 		width: 20rem;
 		height: 15rem;
 		margin: 1rem auto 2rem auto;
@@ -89,9 +77,16 @@
 		width: 435px;
 	}
 
+	input:hover {
+		text-shadow: 0.125rem 0.125rem 0.25rem rgb(175, 175, 175);
+		transform: scale(1.02);
+		transition-duration: 250ms;
+		transition-timing-function: ease-in-out;
+	}
+
 	.converter__input {
 		height: 0.5rem;
-		width: 40%;
+		width: 50%;
 		padding: 0.8rem;
 		border-radius: 0.3rem;
 		overflow: scroll;
