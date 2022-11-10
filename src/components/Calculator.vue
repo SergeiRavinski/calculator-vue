@@ -37,7 +37,7 @@ export default {
 		created() {
 			window.addEventListener('keyup', this.handleKeyUp);
 		},
-		
+
 		computed: {
 			currentInputAsNumber() {
 				return Number(this.currentInput)
